@@ -28,13 +28,13 @@ function Tutorial(){
             <Text style={estilo.Texton1}>-Clique em "Carteirinha digital"  </Text>
             <Image
         style={{width:300,height:300, marginTop:20,}}
-        source={require('../../Imagem/telaHome.jpeg')}
+        source={require('../../image/telaHome.jpeg')}
         />
         <View style={estilo.feed1}>
              <Text style={estilo.Textfeed1} > Passo 2:</Text>
             <Image
          style={{width:300,height:700, marginTop:20,}}
-         source={require('../../Imagem/telaCard.jpeg')}
+         source={require('../../image/telaCard.jpeg')}
          />  
         
           </View>

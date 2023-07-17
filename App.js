@@ -16,7 +16,7 @@ import Recarga from './src/pages/Recarga';
 import Identificar from './src/pages/Identificar';
 import Card from './src/pages/DigCard';
 import Transferencia from './src/pages/Transferencia';
-import Ident from './src/pages/indetificar1';
+import Ident from './src/pages/Identificar1';
 import Config from './src/pages/Configuracao';
 import Contato from './src/pages/Contato';
 import BLock from './src/pages/Block';
@@ -39,13 +39,6 @@ export default function App() {
     <NavigationContainer>
             <Stake.Navigator>
 
-            <Stake.Screen
-                 name="Identificar"
-                 component={Identificar}
-                 options={{
-                  headerShown:false
-                 }}
-                 />
                 <Stake.Screen 
                     name="Login" 
                     component={Login}
@@ -110,7 +103,13 @@ export default function App() {
                   headerShown:false
                 }}
                 />
-               
+               <Stake.Screen
+                 name="Identificar"
+                 component={Identificar}
+                 options={{
+                  headerShown:false
+                 }}
+                 />
                  <Stake.Screen
                  name="Card"
                  component={Card}

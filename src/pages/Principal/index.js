@@ -3,7 +3,7 @@ import { StyleSheet, Text, TouchableOpacity,View,StatusBar }from 'react-native';
 import { Entypo,MaterialIcons,MaterialCommunityIcons,AntDesign,FontAwesome,Feather } from '@expo/vector-icons';
 import { useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
-import firebase from '../../FireBaseConnection';
+import firebase from '../../services/firebaseConnection';
 
 
   export default function Principal() {

@@ -4,7 +4,7 @@ export default function LOADER() {
   return (
     <View style={styles.container}>
 
-         <Image source={require('../../Imagem/logo.png')}/>
+         <Image source={require('../../image/logo.png')}/>
 
 
     </View>

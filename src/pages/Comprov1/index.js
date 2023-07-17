@@ -15,7 +15,7 @@ export default function Comprov1() {
           height: 200,
           backgroundColor: '#1A456D',
         }}
-        source={require('../../load/Load.json')}
+        source={require('../../Load/load.json')}
       />
     </View>
   );

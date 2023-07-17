@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, TextInput, Image, ScrollView, KeyboardAvoidingView, StatusBar } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import firebase from '../../FireBaseConnection';
+import firebase from '../../services/firebaseConnection';
 import {Feather, Entypo} from '@expo/vector-icons';
 
 export default function Logar() {
@@ -47,7 +47,7 @@ export default function Logar() {
           <View style={styles.principal}>
             <View style={styles.form}>
               <View style={styles.logo}>
-                <Image source={require('../../Imagem/logo.png')} />
+                <Image source={require('../../image/logo.png')} />
               </View>
               <View style={{ marginTop: 25 }}>
                 <TextInput

@@ -19,7 +19,7 @@ export default function Card() {
         <Text style={estilos.Texto}>Ola, Usuario</Text>
         <Image
         style={{width:300,height:500, marginTop:20,}}
-        source={require('../../Imagem/card.jpeg')}
+        source={require('../../image/card.jpeg')}
         />
       </View>
       <StatusBar/>

@@ -27,7 +27,7 @@ export default function Noticias() {
         
        </View>
        <Image
-         source={require('../../Imagem/onibus.jpeg')}
+         source={require('../../image/onibus.jpeg')}
          style={{width:148,height:148,}}
         />
         </View>
@@ -43,7 +43,7 @@ export default function Noticias() {
         
        </View>
        <Image
-         source={require('../../Imagem/onibus.jpeg')}
+         source={require('../../image/onibus.jpeg')}
          style={{width:148,height:148}}
         />
         </View>
@@ -57,7 +57,7 @@ export default function Noticias() {
 
        </View>
        <Image
-         source={require('../../Imagem/onibus.jpeg')}
+         source={require('../../image/onibus.jpeg')}
          style={{width:148,height:148}}
         />
         </View>
@@ -72,7 +72,7 @@ export default function Noticias() {
         
        </View>
        <Image
-         source={require('../../Imagem/onibus.jpeg')}
+         source={require('../../image/onibus.jpeg')}
          style={{width:148,height:148}}
         />
         </View>

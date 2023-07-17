@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, TextInput, TouchableOpacity, ScrollView, KeyboardAvoidingView } from 'react-native';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
-import firebase from '../../FireBaseConnection';
+import firebase from '../../services/firebaseConnection';
 import { useState } from 'react';
 
 export default function RecuperarSenha() {
