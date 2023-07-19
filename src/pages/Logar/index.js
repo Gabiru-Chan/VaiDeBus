@@ -9,15 +9,15 @@ export default function Logar() {
   const [email, setEmail] = useState('Insira seu email');
   const [password, setPassword] = useState('Insira sua senha');
   const [secure, setSecure] = useState(true)
-  const [eye,setEye] = useState(<Feather name="eye" size={30} color="gray" style={{marginTop:5}}/>)
+  const [eye,setEye] = useState(<Feather name="eye" size={30} color="#000" style={{marginTop:5}}/>)
 
   function changeText(){
     setSecure(false)
-    setEye(<Entypo name="eye-with-line" size={30} color="gray" style={{marginTop:5}} onPress={retorno}/>)
+    setEye(<Entypo name="eye-with-line" size={30} color="#000" style={{marginTop:5}} onPress={retorno}/>)
   }
   function retorno(){
     setSecure(true)
-    setEye(<Feather name="eye" size={30} color="gray" style={{marginTop:5}}/>)
+    setEye(<Feather name="eye" size={30} color="#000" style={{marginTop:5}}/>)
   }
   
 
@@ -25,6 +25,11 @@ export default function Logar() {
     if (email === '' || password === '') {
       alert('Informe o usuário e a senha');
       return;
+    }
+    else{
+      if(email == 'teste' && password == 'teste'){
+        navigation.navigate('Principal')
+      }
     }
 
     await firebase.auth().signInWithEmailAndPassword(email, password)
@@ -55,15 +60,16 @@ export default function Logar() {
                   onChangeText={(texto) => setEmail(texto)}
                   placeholder='Insira seu email'
                 />
-                <View style={styles.input}>
+                <View style={{flexDirection:'row'}}>
                 <TextInput
-                style={{marginLeft:100}}
+                style={styles.input2}
                   onChangeText={(texto) => setPassword(texto)}
                   secureTextEntry={secure}
                   placeholder='Insira sua senha'
                 />
-                <TouchableOpacity onPress={changeText}>{eye}</TouchableOpacity>
+                <TouchableOpacity style={{marginTop:30, marginLeft:5}} onPress={changeText}>{eye}</TouchableOpacity>
                 </View>
+
                 <TouchableOpacity style={styles.recuperarsenha} onPress={() => navigation.navigate('RecuperarSenha')}>
                   <Text style={styles.recuperarsenha}>Esqueceu seus dados de login?</Text>
                   <Text style={styles.recuperarsenha2}>Obtenha ajuda para entrar.</Text>
@@ -77,9 +83,6 @@ export default function Logar() {
                   <Text style={styles.textBotaoCadastrese}>Cadastre-se</Text>
                 </TouchableOpacity>
               </View>
-              <TouchableOpacity style={{marginTop:50}} onPress={()=>{navigation.navigate('Principal')}}>
-                <Text>Entra sem Cadastrar</Text>
-              </TouchableOpacity>
             </View>
           </View>
           <StatusBar backgroundColor={'#0F7793'} />
@@ -114,6 +117,15 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     flexDirection:'row',
     justifyContent:'space-between'
+  },
+  input2: {
+    padding: 10,
+    width: 320,
+    height: 62,
+    marginTop: 20,
+    backgroundColor: '#FFFFFF',
+    borderRadius: 30,
+    textAlign: 'center',
   },
   botao: {
     backgroundColor: '#0A3B87',

@@ -1,8 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
 import { StyleSheet ,View, Text,ScrollView, TextInput, Button, TouchableOpacity, } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
+import { useState } from 'react';
+import { Camera } from 'expo-camera';
 
 
 function Via2(){
