@@ -61,7 +61,6 @@ export default function Logar() {
                   onChangeText={(texto) => setPassword(texto)}
                   secureTextEntry={secure}
                   placeholder='Insira sua senha'
-                  mama
                 />
                 <TouchableOpacity onPress={changeText}>{eye}</TouchableOpacity>
                 </View>
