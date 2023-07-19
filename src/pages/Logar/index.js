@@ -78,6 +78,9 @@ export default function Logar() {
                   <Text style={styles.textBotaoCadastrese}>Cadastre-se</Text>
                 </TouchableOpacity>
               </View>
+              <TouchableOpacity style={{marginTop:50}} onPress={()=>{navigation.navigate('Principal')}}>
+                <Text>Entra sem Cadastrar</Text>
+              </TouchableOpacity>
             </View>
           </View>
           <StatusBar backgroundColor={'#0F7793'} />
