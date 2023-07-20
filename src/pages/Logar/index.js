@@ -29,6 +29,7 @@ export default function Logar() {
     else{
       if(email == 'teste' && password == 'teste'){
         navigation.navigate('Principal')
+        alert('logado no teste')
       }
     }
 

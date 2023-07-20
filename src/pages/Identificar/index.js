@@ -28,11 +28,11 @@ const Dados = () => {
       </View>
       <View style={{alignItems:'center'}}>
         <Text style={styles.estilodostextos}>ALTERAR CPF:</Text>
-        <TextInput style={styles.inserirtextos}></TextInput>
+        <TextInput style={styles.inserirtextos} keyboardType='numeric'></TextInput>
       </View >
       <View style={{alignItems:'center'}}>
         <Text style={styles.estilodostextos}>ALTERAR Nº CARTÃO:</Text>
-        <TextInput style={styles.inserirtextos}></TextInput>
+        <TextInput style={styles.inserirtextos} keyboardType='numeric'></TextInput>
       </View>
     </View>
   );

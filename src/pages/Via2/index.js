@@ -1,5 +1,4 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet ,View, Text,ScrollView, TextInput, Button, TouchableOpacity, } from 'react-native';
+import { StyleSheet ,View, Text,ScrollView, TextInput, Button, TouchableOpacity, StatusBar} from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import { useState } from 'react';
@@ -60,8 +59,7 @@ function Via2(){
            
           </TouchableOpacity>
 
-          <StatusBar style="auto"
-           backgroundColor='#088cb0'/>
+          <StatusBar backgroundColor={'#0F7793'} />
            
 
    </View>
