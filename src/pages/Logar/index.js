@@ -9,15 +9,15 @@ export default function Logar() {
   const [email, setEmail] = useState('Insira seu email');
   const [password, setPassword] = useState('Insira sua senha');
   const [secure, setSecure] = useState(true)
-  const [eye,setEye] = useState(<Feather name="eye" size={30} color="#000" style={{marginTop:5}}/>)
+  const [eye,setEye] = useState(<Feather name="eye" size={30} color="gray" style={{marginTop:5}}/>)
 
   function changeText(){
     setSecure(false)
-    setEye(<Entypo name="eye-with-line" size={30} color="#000" style={{marginTop:5}} onPress={retorno}/>)
+    setEye(<Entypo name="eye-with-line" size={30} color="gray" style={{marginTop:5}} onPress={retorno}/>)
   }
   function retorno(){
     setSecure(true)
-    setEye(<Feather name="eye" size={30} color="#000" style={{marginTop:5}}/>)
+    setEye(<Feather name="eye" size={30} color="gray" style={{marginTop:5}}/>)
   }
   
 
@@ -61,14 +61,13 @@ export default function Logar() {
                   onChangeText={(texto) => setEmail(texto)}
                   placeholder='Insira seu email'
                 />
-                <View style={{flexDirection:'row'}}>
+                <View style={styles.input}>
                 <TextInput
-                style={styles.input2}
                   onChangeText={(texto) => setPassword(texto)}
                   secureTextEntry={secure}
                   placeholder='Insira sua senha'
                 />
-                <TouchableOpacity style={{marginTop:30, marginLeft:5}} onPress={changeText}>{eye}</TouchableOpacity>
+                <TouchableOpacity  onPress={changeText}>{eye}</TouchableOpacity>
                 </View>
 
                 <TouchableOpacity style={styles.recuperarsenha} onPress={() => navigation.navigate('RecuperarSenha')}>
@@ -115,7 +114,6 @@ const styles = StyleSheet.create({
     marginTop: 20,
     backgroundColor: '#FFFFFF',
     borderRadius: 30,
-    textAlign: 'center',
     flexDirection:'row',
     justifyContent:'space-between'
   },
