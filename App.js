@@ -27,6 +27,7 @@ import Desbloquear from './src/pages/Desbloquear';
 import Tutorial from './src/pages/Tutorial'
 import RecargaPix from './src/pages/RecargaPix';
 import Via2 from './src/pages/Via2';
+import CameraScreen from './src/pages/Camera';
 
 
 const Stake = createNativeStackNavigator();
@@ -180,13 +181,21 @@ export default function App() {
                   headerShown:false
                  }}
                  />
-                  <Stake.Screen
+                 <Stake.Screen
                  name='Via2'
                  component={Via2}
                  options={{
                   headerShown:false
                  }}
                  />
+                 <Stake.Screen
+                 name='CameraScreen'
+                 component={CameraScreen}
+                 options={{
+                  headerShown:false
+                 }}
+                 />
+                  
             </Stake.Navigator>
     </NavigationContainer>
   );

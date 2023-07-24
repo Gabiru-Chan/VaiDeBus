@@ -31,10 +31,10 @@ function Via2(){
             </Text>
           </View>
           <View style={estilo.feed2}>
-            <TouchableOpacity style={estilo.n2}>
+            <TouchableOpacity style={estilo.n2} onPress={()=>{navegar.navigate('CameraScreen')}}>
               <Text style={estilo.Texton4}> Upload foto </Text> 
             </TouchableOpacity>
-            <TouchableOpacity style={estilo.n3}>
+            <TouchableOpacity style={estilo.n3} onPress={()=>{navegar.navigate('CameraScreen')}}>
 
                 <Text style={estilo.Texton4}>Upload</Text>
                 <Text style={estilo.Texton4}> Doc.Identificação</Text>
