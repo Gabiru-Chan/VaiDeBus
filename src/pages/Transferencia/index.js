@@ -4,7 +4,7 @@ import { useNavigation } from '@react-navigation/native';
 import { useState } from 'react';
 
 export default function Tranferencia() {
-  const [valor, setValor] = useState('R$00,00')
+  const [valor, setValor] = useState()
   const navegar = useNavigation()
 
   function real4(){
@@ -73,7 +73,7 @@ export default function Tranferencia() {
         <Text>Outros valores:</Text>
         <TextInput style={estilos.input2}
         keyboardType='numeric'
-        placeholder={valor}
+        placeholder= 'R$00,00'
         onChangeText={(texto) => setValor(texto)}
         />
         <TouchableOpacity style={estilos.botao} onPress={()=>{navegar.navigate('Comprovante')}}>

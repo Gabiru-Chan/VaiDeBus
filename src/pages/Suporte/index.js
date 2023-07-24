@@ -32,7 +32,7 @@ export default function Suporte() {
                     />
 
                     <TextInput style={estilos.formularioTexto}
-                    placeholder='Nome (OBRIGATORIO)'
+                    placeholder='CPF (OBRIGATORIO)'
                     />
                 </View>
                 <View style={estilos.comentarios}>
