@@ -1,22 +1,14 @@
-import { Text, View, StyleSheet, Image, TouchableOpacity,StatusBar, ScrowView, FlatList } from 'react-native';
+import { Text, View, StyleSheet, Image, TouchableOpacity,StatusBar, ScrollView, FlatList } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import { useState, useEffect } from 'react';
 import firebase from '../../services/firebaseConnection'
 
 export default function Historico() {
-  const navegar = useNavigation()
-  const [data, setData] = useState([]);
-  const [onibus, setOnibus] = useState([]);
-  const [hora, setHora] = useState([]);
+  const navegar = useNavigation();
   const [passagens, setPassagens] = useState([]);
 
 
-  const info = [
-    {id:1,linha:418,hora:'9:00'},
-    {id:2,linha:611,hora:'12:00'},
-    {id:3,linha:624,hora:'15:30'},
-  ]
 
   useEffect(()=>{
     buscarPassagensNoBanco();
@@ -32,15 +24,11 @@ export default function Historico() {
           hora: item.val().Horario,
           onibus: item.val().Onibus,
         }
-        setPassagens((passagensExistentes) => [...passagensExistentes, passagem]);
-        setOnibus((onibusExistentes) => [...onibusExistentes, passagem.onibus]);
-        setHora((horaExistente) => [...horaExistente, passagem.hora])
+        setPassagens((passagensExistentes) => [passagem,...passagensExistentes]);
       });
+      
     })
   }
- console.log(onibus);
- console.log(hora);
-
 
      
   return (
@@ -57,12 +45,15 @@ export default function Historico() {
       </View>
       <View style={styles.principal}>
         <View style={styles.linhas}>
-          <Text style={styles.textohoje}>Hoje</Text>
+         
           
           <FlatList
           data={passagens}
           renderItem={({item})=><Linha data={item}/>}
           />
+          
+
+         
           
 
           
@@ -77,6 +68,11 @@ export default function Historico() {
 
   function Linha(props){
      return (
+      <View>
+        <View style={{borderBottomColor:'#000', borderBottomWidth:1,height:120}}>
+        <View>
+          <Text style={styles.textohoje}>{props.data.data}</Text>
+        </View>
       <View style={styles.alinhamentopadrao}>
           <View style={styles.linha}>
             <Text style={styles.linharecente}>
@@ -84,6 +80,8 @@ export default function Historico() {
             </Text>
           </View>
           <Text style={styles.alinhamentohorario1}>- {props.data.hora}</Text>
+        </View>
+        </View>
         </View>
      );
   }
