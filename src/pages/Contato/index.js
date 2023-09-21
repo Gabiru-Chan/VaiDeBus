@@ -1,4 +1,4 @@
-import { Text, View, StyleSheet,Image, TouchableOpacity } from 'react-native';
+import { Text, View, StyleSheet, TouchableOpacity, Linking } from 'react-native';
 import { AntDesign, Feather,MaterialIcons, Foundation } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 
@@ -7,6 +7,10 @@ export default function Contato() {
     function voltar(){
         navegar.navigate('Config')
     }
+    function site(){
+      Linking.openURL('https://vaidebusao.github.io/CONNECTTRANS_Enterprise/home.html');
+    }
+    
   return (
     <View style={styles.container}> 
        <View style={styles.header}> 
@@ -34,7 +38,7 @@ export default function Contato() {
           <Text style={styles.textoitems}>Facebook</Text>
          <AntDesign name="facebook-square" size={24} color="#0A3B87"  style={{marginLeft:19}}/>
         </TouchableOpacity>
-         <TouchableOpacity style={styles.items}>
+         <TouchableOpacity style={styles.items} onPress={site}>
           <Text style={styles.textoitems}>Site</Text>
          <Foundation name="web" size={34} color="#0A3B87"  style={{marginLeft:70}} />
         </TouchableOpacity>

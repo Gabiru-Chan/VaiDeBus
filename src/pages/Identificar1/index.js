@@ -22,8 +22,6 @@ export default function Ident() {
         <Text style={styles.textodados}>       ****</Text>
         <Text style={styles.textodados}>nº cartão:</Text>
         <Text style={styles.textodados}>        ****</Text>
-        <Text style={styles.textodados}>Categoria do cartão:</Text>
-        <Text style={styles.textodados}>        ****</Text>
       </View>
       <View style={{alignItems: 'center'}}>
         <TouchableOpacity style={styles.botão} onPress={()=>{navegar.navigate('Identificar')}}>
